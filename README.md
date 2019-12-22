@@ -1,3 +1,4 @@
+![Logo](https://github.com/GaukharSH/mlenkf/logo.png)
 # MLEnKF.jl #
 
 This package provides a Julia language implementation of the multilevel ensemble Kalman filtering (MLEnKF) method with the comparison to the ensemble Kalman filtering method (EnKF). 
