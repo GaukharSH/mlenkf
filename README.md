@@ -12,13 +12,13 @@ If you have already installed Julia 1.2, then skip to the **Step 2** under *Inst
 ## Installation
 
 1. Install [Julia 1.2](https://julialang.org/downloads/) following the installation steps on its website. 
-2. Download and save [mlenkf.jl](https://github.com/GaukharSH/mlenkf/mlenkf.jl) in your desired location.
+2. Download and save [mlenkf.jl](https://github.com/GaukharSH/mlenkf) in your desired location.
 3. Open a terminal and `cd` to the location of `mlenkf.jl`.
 4. In the command line type 
 
     **julia>** `include("mlenkf.jl")`
     
-    It might need certain packages to install, then you have to run
+    If it needs certain packages to install, then you have to run
     
     **julia>** `Pkg.add("TheRequestedPkgName")`
 
