@@ -75,7 +75,7 @@ The above command also saves the measurement series, the underlying truth, runti
  
     **julia>** `plotResults("enkf$(problemText)_T$(T).jld","mlenkfOld$(problemText)_T$(T).jld","mlenkf$(problemText)_T$(T).jld")`
     
-    according to saved file names. For example, $(problemText)="DoubleWell" and $(T)="20". This provides convergence rates of mean in Figure 2 and covariance in Figure 3, comparing the performance of EnKF and MLEnKF methods in terms of runtime vs RMSE. The reference triangle parameters should be adjusted according to each simulation by altering the respective lines in function "plotResults" of `mlenkf.jl` file.
+    according to saved file names. For example, $(problemText)="DoubleWell" and $(T)="20". This provides convergence rates of mean in Figure 2 and covariance in Figure 3, comparing the performance of EnKF and MLEnKF methods in terms of runtime vs RMSE. The reference triangle parameters should be adjusted according to each simulation by altering the respective lines in function `plotResults` of `mlenkf.jl` file.
 
 4. Note also that the program runs in parallel. The number of workers is set in the beginning of the code by "const parallel_procs = 6;" (where we observe that only 5 are 100% active during long computations). Due to the parallelism, care has been taken to employ non-overlapping random seeds on different parallel processes through the function "Future.randjump()". Parallel computations are executed through the "pmap" function. The estimation of wall-clock runtime is done as follows for EnKF (and analogously for MLEnKF):
 
